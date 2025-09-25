@@ -25,6 +25,7 @@ class xlsx(object):
     '''
     def del_lastone(self):
         self.df.drop(self.df.index[-1], inplace=True)
+        self.df.to_excel('2503_fee.xlsx', sheet_name='Sheet1', index=False)
     '''删除最后一行数据'''
 
 a= xlsx('2503_fee.xlsx')
